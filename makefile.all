@@ -1,0 +1,20 @@
+SUBDIRS = $(PROJECT_HOME)/src/base/appfrm \
+	$(PROJECT_HOME)/src/module-a \
+	$(PROJECT_HOME)/src/module-b \
+	 $(PROJECT_HOME)/src/common/redis \
+	$(PROJECT_HOME)/src/common/memcached
+
+.PHONY: all  
+all:  
+	@list='$(SUBDIRS)'; for subdir in $$list; do \
+	echo "Clean in $$subdir";\
+	cd $$subdir && $(MAKE);\
+	done
+  
+.PHONY: clean  
+clean:
+	@list='$(SUBDIRS)'; for subdir in $$list; do \
+	echo "Clean in $$subdir";\
+	cd $$subdir && $(MAKE) clean;\
+	done
+

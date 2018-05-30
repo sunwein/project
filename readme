@@ -1,0 +1,21 @@
+
+[.bash_profile]
+	修改此文件，添加环境变量 PROJCET_HOME
+	export PROJECT_HOME=/home/sunwei/project
+	
+	source .bash_profile
+
+[app]
+	应用进程编译后提交目录
+
+[lib]
+	库文件提交目录
+
+[include]
+	库相关的头文件目录
+
+[src]
+	[base]
+	[common]
+	[module-a]
+	[module-b]
